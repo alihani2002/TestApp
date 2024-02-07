@@ -1,0 +1,21 @@
+html,body{
+  margin: 0 auto;
+  padding: 0 ;
+}
+
+.NavbarItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #19a7ff;
+  padding: 10px;
+}
+
+.NavbarItem a {
+  color: rgb(250, 250, 250);
+  text-decoration: none;
+}
+
+.NavbarItem a:hover {
+  color: #cde7ff; /* Change color on hover */
+}
