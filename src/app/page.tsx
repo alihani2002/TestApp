@@ -1,6 +1,7 @@
 import Link from "next/link";
+import ProductsPage from "./Componants/Products/page";
 
-import NavBar from "./Componants/navbar";
+
 
 
 export default function Home() {
@@ -17,11 +18,13 @@ export default function Home() {
       </Link>
     </div>
     
-<NavBar/>
-
-
+    <div className="container p-5 my-5 bg-secondary text-white">
+      <h1> Products ApI</h1>
+      <ProductsPage/>
       
+</div>
 
+     
    </>
   );
 }
