@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+import NavBar from "./Componants/navbar";
+
+
 export default function Home() {
   return (
    <>
@@ -13,6 +16,12 @@ export default function Home() {
       <h1> click here  </h1>
       </Link>
     </div>
+    
+<NavBar/>
+
+
+      
+
    </>
   );
 }
