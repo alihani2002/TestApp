@@ -21,8 +21,7 @@ export default function Home() {
     <div className="container p-5 my-5 bg-secondary text-white">
       <h1> Products ApI</h1>
       <ProductsPage/>
-      
-</div>
+  </div>
 
      
    </>

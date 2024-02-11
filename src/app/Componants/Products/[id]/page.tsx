@@ -1,8 +1,15 @@
 import { taintUniqueValue } from "next/dist/server/app-render/rsc/taint";
 import Link from "next/link";
 import { title } from "process";
-async function getProducts() {
-    const res = await fetch('https://dummyjson.com/products')
+import { Suspense } from "react";
+interface IProps{
+    params:{
+        id:string;
+    }
+}
+
+async function getProducts(productId:string) {
+    const res = await fetch('https://dummyjson.com/products/${productId}')
     
     if (!res.ok) {
       throw new Error('Failed to fetch data')
@@ -10,16 +17,16 @@ async function getProducts() {
    
     return res.json()
   }
-interface IProps{}
-const ProductsPage=async({}:IProps)=>{
-    const {products} = await getProducts();
+const ProductsPage=async({params}:IProps)=>{
+    const {id,title,thumbnail} = await getProducts(params.id);
      return(
         <div>
-         {
-        products.map(({id,title}:{id:number,title:string})=>
-        <h3 key={id}><Link href={`/products/${id}`}>{title}</Link>
-        </h3>
-        )}
+        <h1> Product : </h1>
+        
+            <h2>
+                {id }:{title}
+            </h2>
+
    
         </div>
     );
