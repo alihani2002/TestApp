@@ -8,8 +8,8 @@ interface IProps{
     }
 }
 
-async function getProducts(productId:string) {
-    const res = await fetch('https://dummyjson.com/products/${productId}')
+async function getProducts(ProductId:string) {
+    const res = await fetch(`https://dummyjson.com/products/${ProductId}`)
     
     if (!res.ok) {
       throw new Error('Failed to fetch data')
