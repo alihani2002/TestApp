@@ -1,5 +1,6 @@
 import Link from "next/link";
-import ProductsPage from "./Componants/Products/page";
+import { Navbar } from "react-bootstrap";
+import ProductsPage from "./Product/page";
 
 
 
@@ -8,7 +9,7 @@ export default function Home() {
   return (
    <>
     <div className="container p-5 my-5 bg-primary text-white">
-      <h1> Hello Safary </h1>
+      <h1> Hello Good  </h1>
     </div>
     <br/>
     <br/>
@@ -25,7 +26,9 @@ export default function Home() {
       <ProductsPage/>
   </div>
 
-     
+     <>
+     <Navbar/>
+     </>
    </>
   );
 }
