@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProductsPage from "./Componants/Products/page";
+import ProductsPage from "./Products/page";
 
 
 
