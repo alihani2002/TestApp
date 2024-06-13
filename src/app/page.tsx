@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Navbar } from "react-bootstrap";
 import ProductsPage from "./Product/page";
+import ToDoList from "./Componants/To-Do/TodoList";
 
 
 
@@ -29,6 +30,8 @@ export default function Home() {
      <>
      <Navbar/>
      </>
+
+     <ToDoList/>
    </>
   );
 }
